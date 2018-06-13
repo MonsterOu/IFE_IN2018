@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>改变日期格式</title>
+</head>
+<body>
+<script>
+    //补充代码
+    function newDate() {
+        var date = new Date();
+        var weeks = ['日','一','二','三','四','五','六'];
+        var year = date.getFullYear(),
+            month = date.getMonth()+1,
+            days = date.getDate(),
+            week = date.getDay(),
+            hours = date.getHours(),
+            minutes = date.getMinutes(),
+            seconds = date.getSeconds();
+        document.write('今天是'+year+'年'+month+'月'+days+'日'+'星期'+weeks[week]+'<br>'+hours+':'+minutes+':'+seconds);
+    }
+    newDate();
+</script>
+</body>
+</html>

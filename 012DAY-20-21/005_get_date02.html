@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>员工合同到期时间</title>
+</head>
+<body>
+<script>
+    //代码补充
+    function newDate(year,month,days) {
+    var year = parseInt(prompt('请输入员工的入职年份')),
+        month = parseInt(prompt('请输入员工的入职月份')),
+        days = parseInt(prompt('请输入员工的入职日期'));
+        var date = new Date(year,month,days);
+        var tempDate = new Date(year+3,month,days);
+        document.write('该员工入职时间是：'+year+'-'+month+'-'+days+'<br>');
+        document.write('该员工合同到期时间是：'+tempDate.getFullYear()+'-'+month+'-'+days);
+    }
+    newDate();
+</script>
+</body>
+</html>
