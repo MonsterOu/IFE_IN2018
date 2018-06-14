@@ -30,7 +30,30 @@
         <option>爱奇艺</option>        
     </select>
     <script>
-        
-    </script>
+    var schoolRadio = document.querySelector('#school');
+    var companyRadio = document.querySelector('#company');
+    var schoolSelect = document.querySelector('#school-select');
+    var companySelect = document.querySelector('#company-select');
+    schoolRadio.onclick = function () {
+      console.log(1);
+    }
+    function checkSelect(e) {
+      if (e.target.checked) {
+        console.log(1);
+        if (e.target.id.indexOf('school') >= 0) {
+          schoolSelect.style.cssText = "display:block"
+          companySelect.style.cssText = 'display:hide';
+        } else if (e.target.id.indexOf('company') >= 0) {
+          schoolSelect.style.cssText = 'display:hide';
+          companySelect.style.cssText = "display:block"
+        }
+      }
+    }
+    schoolRadio.addEventListener('click', checkSelect);
+    companyRadio.addEventListener('click', checkSelect);
+    // schoolSelect.style.display = 'block';
+  </script>
+  <!-- 当用户选择了 School 的单选框时，显示 School 的下拉选项，隐藏 Company 的下拉选项
+当用户选择了 School 的单选框时，显示 Company 的下拉选项，隐藏 School 的下拉选项 -->
 </body>
 </html>
